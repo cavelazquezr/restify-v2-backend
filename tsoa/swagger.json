@@ -1,0 +1,86 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"userOutput": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"firstname": {
+						"type": "string"
+					},
+					"lastname": {
+						"type": "string"
+					},
+					"avatar": {
+						"type": "string"
+					},
+					"created_at": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"email",
+					"firstname",
+					"lastname"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "restifyv2-api",
+		"version": "1.0.0",
+		"description": "REST API designed to interact with Restify Backend",
+		"license": {
+			"name": "ISC"
+		},
+		"contact": {
+			"name": "Carlos Velazquez"
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/auth/users": {
+			"get": {
+				"operationId": "GetUsers",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/userOutput"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Users"
+				],
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
