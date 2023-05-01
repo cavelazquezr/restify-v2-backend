@@ -1,4 +1,4 @@
-# restify-v2-backend
+# Restify V2 Backend
 
 This repository is to store all code for the Restify v2 Backend
 
@@ -20,6 +20,14 @@ npm run setupDb
 
 ```sh
 npm run dev
+```
+
+## Once your application is running:
+
+If you are working in your localhost, you can view all endpoints here:
+
+```sh
+http://localhost:5080/docs
 ```
 
 
